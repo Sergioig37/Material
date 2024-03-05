@@ -8,4 +8,6 @@ export const Detalle = () => {
   return (
     <>{id}</>
   )
+
+  
 }

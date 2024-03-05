@@ -43,6 +43,8 @@ export const Navbar = () => {
           </IconButton>
           <Typography variant="h6" component="div">
             
+            
+
             {/* <Button color="inherit" onClick={handleListado}>Listado</Button>
             <Button variant="contained" onClick={handleInfo}>Info</Button> */}
 

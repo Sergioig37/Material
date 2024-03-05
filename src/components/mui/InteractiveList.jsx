@@ -16,6 +16,7 @@ import Typography from "@mui/material/Typography";
 import FolderIcon from "@mui/icons-material/Folder";
 import DeleteIcon from "@mui/icons-material/Delete";
 import { Edit } from "@mui/icons-material";
+import { useState, useEffect } from "react";
 import "./InteractiveList.css";
 import { useNavigate } from "react-router-dom";
 
@@ -50,6 +51,8 @@ export default function InteractiveList() {
   const handleDetail = () => {
     navigate("/detalle/");
   };
+
+
 
   return (
     <Box sx={{ flexGrow: 1, maxWidth: 752 }}>

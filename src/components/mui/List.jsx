@@ -18,6 +18,8 @@ export const List = () => {
           </ImageListItem>
         ))}
       </ImageList>
+
+      
     </div>
   );
 };

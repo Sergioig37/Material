@@ -7,5 +7,7 @@ export const Home = () => {
     <>
      <List/>
     </>
+
+    
   )
 }
