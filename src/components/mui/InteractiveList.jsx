@@ -63,8 +63,9 @@ export default function InteractiveList() {
           </Typography>
           <Demo>
             <List dense={dense}>
-              {generate(
-                <ListItem
+              
+              {users.map((usuario)=>(
+                <ListItem key={usuario.id}
                   secondaryAction={
                     <IconButton edge="end" aria-label="delete">
                       <Edit onClick={handleDetail} />
@@ -80,7 +81,7 @@ export default function InteractiveList() {
                     primary="Single-line item"
                     secondary={secondary ? "Secondary text" : null}
                   />
-                </ListItem>
+                </ListItem>)
               )}
             </List>
           </Demo>
