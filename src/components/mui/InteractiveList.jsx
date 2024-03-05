@@ -39,7 +39,7 @@ export default function InteractiveList() {
   const navigate = useNavigate();
 
   const handleDetail = () => {
-    navigate("/detalle" );
+    navigate("/detalle/" );
   };
 
   return (
