@@ -52,8 +52,6 @@ export default function InteractiveList() {
     navigate("/detalle/");
   };
 
-
-
   return (
     <Box sx={{ flexGrow: 1, maxWidth: 752 }}>
       <Grid container spacing={2}>
@@ -63,9 +61,9 @@ export default function InteractiveList() {
           </Typography>
           <Demo>
             <List dense={dense}>
-              
-              {users.map((usuario)=>(
-                <ListItem key={usuario.id}
+              {users.map((usuario) => (
+                <ListItem
+                  key={usuario.id}
                   secondaryAction={
                     <IconButton edge="end" aria-label="delete">
                       <Edit onClick={handleDetail} />
@@ -73,16 +71,17 @@ export default function InteractiveList() {
                   }
                 >
                   <ListItemAvatar>
-                    <Avatar>
-                      <FolderIcon />
-                    </Avatar>
+                    <Avatar
+                      alt="Remy Sharp"
+                      src={usuario.avatar}
+                    />
                   </ListItemAvatar>
                   <ListItemText
-                    primary="Single-line item"
+                    primary={usuario.username}
                     secondary={secondary ? "Secondary text" : null}
                   />
-                </ListItem>)
-              )}
+                </ListItem>
+              ))}
             </List>
           </Demo>
         </Grid>
