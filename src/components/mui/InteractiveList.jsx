@@ -39,7 +39,7 @@ export default function InteractiveList() {
   const navigate = useNavigate();
 
   const handleDetail = () => {
-    navigate("/detalle");
+    navigate("/detalle" );
   };
 
   return (
@@ -50,12 +50,12 @@ export default function InteractiveList() {
             Avatar with text and icon
           </Typography>
           <Demo>
-            <List dense={dense} onClick={handleDetail}>
+            <List dense={dense} >
               {generate(
                 <ListItem 
                   secondaryAction={
                     <IconButton edge="end" aria-label="delete">
-                      <Edit />
+                      <Edit onClick={handleDetail}/>
                     </IconButton>
                   }
                 >

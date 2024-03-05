@@ -3,9 +3,9 @@ import { useParams } from "react-router-dom"
 
 export const Detalle = () => {
 
-  useParams
+  const {id} = useParams();
 
   return (
-    <>Detalle</>
+    <>{id}</>
   )
 }
