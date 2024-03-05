@@ -48,8 +48,8 @@ export default function InteractiveList() {
 
   const navigate = useNavigate();
 
-  const handleDetail = () => {
-    navigate("/detalle/");
+  const handleDetail = (id) => {
+    navigate(`/detalle/${id}`);
   };
 
   return (
@@ -66,7 +66,7 @@ export default function InteractiveList() {
                   key={usuario.id}
                   secondaryAction={
                     <IconButton edge="end" aria-label="delete">
-                      <Edit onClick={handleDetail} />
+                      <Edit onClick={() => handleDetail(usuario.id)} />
                     </IconButton>
                   }
                 >
