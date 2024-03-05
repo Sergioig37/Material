@@ -19,7 +19,6 @@ import { Edit } from "@mui/icons-material";
 import "./InteractiveList.css";
 import { useNavigate } from "react-router-dom";
 
-
 function generate(element) {
   return [0, 1, 2].map((value) =>
     React.cloneElement(element, {
@@ -36,10 +35,20 @@ export default function InteractiveList() {
   const [dense, setDense] = React.useState(false);
   const [secondary, setSecondary] = React.useState(false);
 
+  const [users, setUsers] = useState([]);
+
+  useEffect(() => {
+    fetch("https://www.melivecode.com/api/users")
+      .then((res) => res.json())
+      .then((result) => {
+        setUsers(result);
+      });
+  });
+
   const navigate = useNavigate();
 
   const handleDetail = () => {
-    navigate("/detalle/" );
+    navigate("/detalle/");
   };
 
   return (
@@ -50,12 +59,12 @@ export default function InteractiveList() {
             Avatar with text and icon
           </Typography>
           <Demo>
-            <List dense={dense} >
+            <List dense={dense}>
               {generate(
-                <ListItem 
+                <ListItem
                   secondaryAction={
                     <IconButton edge="end" aria-label="delete">
-                      <Edit onClick={handleDetail}/>
+                      <Edit onClick={handleDetail} />
                     </IconButton>
                   }
                 >
