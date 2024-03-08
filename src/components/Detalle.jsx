@@ -31,8 +31,11 @@ export const Detalle = () => {
         setEmail(result.user.email);
         setAvatar(result.user.avatar);
       });
-  },[id]);
+  },[]);
 
+//crear una constante que llame a la ruta create
+//a esa función le pasarías unos parámetros
+//y se llamaría con el form
 
   return (
     <>
